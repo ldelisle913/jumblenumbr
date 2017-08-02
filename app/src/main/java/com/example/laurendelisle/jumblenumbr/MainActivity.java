@@ -16,11 +16,16 @@ public class MainActivity extends AppCompatActivity {
     //Add = 1. Subtract = 2, multiply = 3, divide = 4
     int operation = -1;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
 
+        //Find a refernce a add/subtract buttons from the XML view
         final View add = findViewById(id.plus);
         final View subtract = findViewById(id.minus);
         final View divide = findViewById(id.divide);
@@ -116,18 +121,15 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (right.getText().length() == 0)
-
                 {
                     Toast.makeText(getBaseContext(), "Please Enter A Number On The Right", Toast.LENGTH_LONG);
                     return;
 
                 }
-                if (operation == -1)
-                {
+                if (operation == -1) {
                     Toast.makeText(getBaseContext(), "What Operation Would You Like To Perform", Toast.LENGTH_LONG);
                     return;
                 }
-
 
 
                 calculate();
